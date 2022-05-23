@@ -1,3 +1,6 @@
 #!/bin/sh -l
 
-terraform "$@"
+set -xo 
+
+cd "$1" || exit
+terraform "$2"

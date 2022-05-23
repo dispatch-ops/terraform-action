@@ -2,6 +2,10 @@
 name: 'terraform'
 description: 'Run terraform commands'
 inputs:
+  path:
+    description: 'Path to the terraform directory to run commands on'
+    required: true
+    default: '.'
   command:
     description: 'command to run'
     required: true
@@ -13,4 +17,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.path }}
     - ${{ inputs.command }}
