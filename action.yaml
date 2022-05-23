@@ -1,0 +1,16 @@
+# action.yml
+name: 'terraform'
+description: 'Run terraform commands'
+inputs:
+  command:
+    description: 'command to run'
+    required: true
+    default: --help
+outputs:
+  stdout: # id of output
+    description: 'captured stdout'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
