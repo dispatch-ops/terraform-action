@@ -3,4 +3,4 @@
 set -xo 
 
 cd "$1" || exit
-terraform "$2"
+terraform init && terraform "$2"
