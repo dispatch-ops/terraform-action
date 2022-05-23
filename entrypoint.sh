@@ -3,4 +3,4 @@
 set -xo 
 
 cd "$1" || exit
-terraform init && terraform "$2"
+terraform init -backend=false && terraform "$2"
