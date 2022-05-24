@@ -4,7 +4,7 @@ description: 'Run terraform commands'
 inputs:
   path:
     description: 'Path to the terraform directory to run commands on'
-    required: true
+    required: false
     default: '.'
   command:
     description: 'command to run'
